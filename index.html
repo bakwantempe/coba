@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="descripton" content="KOMA Cafe, tempat nongkrong nyaman di Pal IX dengan kopi berkualitas dan makanan lezat. Kunjungi kami sekarang!" />
+    <title>Beranda - Kafe Koma Terbaik di Pal IX</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="logoweb.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+      /* Global Styles */
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #4a2c2a;
+        background-color: #f9f6f2;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Poppins", sans-serif;
+        color: #4a2c2a;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Section Beranda */
+      #beranda {
+        position: relative;
+        border-radius: 0px;
+        height: 573px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        overflow: hidden;
+        margin: 0px;
+      }
+
+      #beranda video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 613px;
+        object-fit: cover;
+      }
+
+      #beranda .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      #beranda .content {
+  position: relative;
+  text-align: center; /* Teks rata tengah */
+  display: flex;
+  flex-direction: column; /* Susun elemen secara vertikal */
+  align-items: center; /* Rata tengah horizontal */
+  justify-content: center; /* Rata tengah vertikal */
+  gap: 10px; /* Jarak antara h2 dan p */
+}
+
+      #beranda h2 {
+  font-size: 3rem;
+  margin: 0;
+  animation: slideIn 1s ease-in-out;
+}
+
+#beranda p {
+  font-size: 1.5rem;
+  margin: 0;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+      #beranda .cta-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #ff5722;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        z-index: 3;
+      }
+
+      #beranda .cta-button:hover {
+        background-color: #e64a19;
+      }
+
+      .page-title {
+        color: #fbcfa2;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      /* Section Tentang Kami */
+      #tentang-kami {
+        padding: 50px 20px;
+        background-color: #f9f6f2;
+        color: #4a2c2a;
+        text-align: center;
+      }
+
+      #tentang-kami h2 {
+        position: relative;
+        z-index: 2;
+        color: black !important;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      #tentang-kami p {
+        position: relative;
+        color: black !important;
+        z-index: 2;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 10px 0;
+      }
+
+      #home {
+    color : white;
+    border-radius : 100px;
+    background : #fbcfa2;
+    padding : 5px;
+}
+
+      /* Container untuk teks dan gambar */
+.tentang-container {
+  display: flex; /* Menggunakan Flexbox */
+  align-items: center; /* Rata tengah vertikal */
+  gap: 20px; /* Jarak antara teks dan gambar */
+  max-width: 1200px; /* Lebar maksimum container */
+  margin: 0 auto; /* Rata tengah horizontal */
+  padding: 20px; /* Padding untuk container */
+}
+
+/* Bagian teks */
+.tentang-teks {
+  flex: 1; /* Mengisi ruang yang tersedia */
+  text-align: justify;
+}
+
+.tentang-teks p {
+  font-size: 20px !important; /* Ubah ukuran teks sesuai kebutuhan */
+  line-height: 1.6; /* Jarak antar baris */
+  margin: 10px 0; /* Jarak antar paragraf */
+}
+
+/* Bagian gambar */
+.tentang-gambar {
+  flex: 1; /* Mengisi ruang yang tersedia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tentang-gambar img {
+  max-width: 50%; /* Gambar tidak melebihi container */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 10px; /* Sudut gambar melengkung */
+}
+
+      /* Section Jam Buka */
+      #jam-buka {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #f9f6f2;
+      }
+
+      #jam-buka h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      #jam-buka p {
+        font-size: 1.2rem;
+      }
+
+      /* Section Galeri */
+      #galeri {
+        padding: 50px 20px;
+        background-color: white;
+        text-align: center;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .gallery img {
+        width: 200px;
+        height: auto;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Section Testimoni */
+      #testimoni {
+        padding: 50px 20px;
+        background-color: #f9f6f2;
+        text-align: center;
+      }
+
+      #testimoni h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      blockquote {
+        border-left: 4px solid #ff5733;
+        margin: 20px 0;
+        padding-left: 10px;
+        font-style: italic;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        #beranda h2 {
+          font-size: 2.5rem;
+        }
+
+        #beranda p {
+          font-size: 1.2rem;
+        }
+
+        .tentang-container {
+    flex-direction: column; /* Susun vertikal di perangkat mobile */
+  }
+
+  .tentang-gambar {
+    text-align: center; /* Gambar rata tengah di perangkat mobile */
+  }
+
+        #tentang-kami h2,
+        #jam-buka h2,
+        #galeri h2,
+        #testimoni h2 {
+          font-size: 2rem;
+        }
+
+        .gallery img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="latar">
+          <div>
+              <!--                <img src="koma2.jpg" alt="koma">-->
+          </div>
+  
+          <div>
+              <p class="judulkoma">K O M A,</p>
+              <br>
+              <p class="judulcne">C O F F E E & E A T E R Y</p>
+          </div>
+      </div>
+  </header>
+  
+  <header class="header2">
+      <nav>
+          <a href="index.html" class="kiri" id="home">Home</a>
+          <a href="tentang.html" class="kiri">About Us</a>
+          <a href="galeri.html" class="kiri">Our Galery</a>
+      </nav>
+  
+      <div>
+          <img src="koma3.png" alt="koma">
+      </div>
+  
+      <nav>
+          <a href="fasilitas.html" class="kanan">Facility</a>
+          <a href="menu.html" class="kanan">Menu</a>
+          <a href="kontak.html" class="kanan">Contact Us</a>
+      </nav>
+      
+      <div class="audio-1">
+        <audio id="audio" src="music.MP3" preload="auto" loop volume="0.2"></audio>
+        <button id="playPauseBtn" class="play-pause-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" id="pauseIcon" class="audio-icon" viewBox="0 0 16 16" style="display: none;">
+            <path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"/>
+            <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"/>
+            <path d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" id="playIcon" class="audio-icon" viewBox="0 0 16 16">
+            <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0"/>
+          </svg>
+              </div>
+      <script>
+        const audio = document.getElementById('audio');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const playIcon = document.getElementById('playIcon');
+const pauseIcon = document.getElementById('pauseIcon');
+
+playPauseBtn.addEventListener('click', function() {
+  if (audio.paused) {
+    audio.play();
+    playIcon.style.display = 'none';
+    pauseIcon.style.display = 'inline';
+  } else {
+    audio.pause();
+    playIcon.style.display = 'inline';
+    pauseIcon.style.display = 'none';
+  }
+});
+      </script>
+  </header>
+
+    <section id="beranda">
+      <video autoplay muted loop>
+        <source src="vid.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay"></div>
+      <div class="content">
+        <h2 class="page-title">Selamat Datang di Kafe Koma</h2>
+        <p style=" font-family: 'comic sans ms';">"selalu ada kata setelah koma"</p>
+      </div>
+    </section>
+
+    <div id="tentang-kami">
+      <h2>Tentang Kami</h2>
+      <div class="tentang-container">
+        <div class="tentang-teks">
+          <p>
+            Selamat datang di Kafe Koma, tempat di mana cita rasa bertemu dengan
+            kenyamanan. Kami adalah kafe yang didirikan dengan semangat untuk
+            menyajikan pengalaman kuliner yang tak terlupakan. Terletak di jantung
+            Kota Pal IX, Kafe Koma menawarkan suasana yang hangat dan ramah, ideal
+            untuk bersantai, berkumpul dengan teman, atau bahkan bekerja.
+          </p>
+          <p>
+            Di Kafe Koma, kami percaya bahwa setiap cangkir kopi memiliki cerita.
+            Kami menggunakan biji kopi pilihan yang dipanggang dengan sempurna untuk
+            menghasilkan rasa yang kaya dan aroma yang menggoda. Selain kopi, kami
+            juga menawarkan berbagai pilihan minuman segar dan makanan lezat yang
+            dibuat dengan bahan-bahan berkualitas tinggi.
+          </p>
+        </div>
+        <div class="tentang-gambar">
+          <img src="parkir.png" alt="Parkir Kafe Koma" /> <!-- Gambar parkir.jpg -->
+        </div>
+      </div>
+    </div>
+
+    <section id="jam-buka">
+      <h2>Jam Buka</h2>
+      <p>Senin - Jumat: 08:00 - 22:00</p>
+      <p>Sabtu - Minggu: 09:00 - 23:00</p>
+    </section>
+
+    <section id="galeri">
+      <h2>Galeri Kafe Koma</h2>
+      <div class="gallery">
+        <img src="1.jpg" alt="Gambar 1" />
+        <img src="2.jpg" alt="Gambar 2" />
+        <img src="3.jpg" alt="Gambar 3" />
+        <img src="4.jpg" alt="Gambar 4" />
+        <img src="koma2.jpg" alt="Gambar 5" />
+      </div>
+    </section>
+
+    <section id="testimoni">
+      <h2>Apa Kata Mereka</h2>
+      <blockquote>
+        <p>
+          "Kafe Koma adalah tempat favorit saya! Makanannya selalu lezat dan
+          suasananya sangat nyaman."
+        </p>
+        <footer>- Pelanggan Setia</footer>
+      </blockquote>
+      <blockquote>
+        <p>
+          "Pelayanan yang ramah dan cepat. Saya selalu merasa di rumah saat
+          berada di sini."
+        </p>
+        <footer>- Pengunjung Reguler</footer>
+      </blockquote>
+    </section>
+
+    <footer>
+      <div class="latar">
+          <div>
+              <img src="koma2.jpg" alt="koma">
+          </div>
+  
+          <div>
+              <p class="judulkoma">K O M A,</p>
+              <br>
+              <p class="judulcne">C O F F E E & E A T E R Y</p>
+          </div>
+      </div>
+  </footer>
+  
+  <footer class="footer2">
+      <div>
+          <p>Jl. Perdamaian, Pal IX, Kec. Sungai Kakap, Kabupaten Kubu Raya, Kalimantan Barat</p>
+          <p>&copy 2024 KOMA COFFEE</p>
+      </div>
+  </footer>
+  </body>
+</html>
